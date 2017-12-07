@@ -1,0 +1,179 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* stylelint-disable */
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section{display:block}html,.stylelint{line-height:1}body,.stylelint{line-height:inherit}ol,ul,.stylelint{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+/* stylelint-enable */
+
+/* Base Styles */
+
+/*
+  Hint: these tend to be
+  1. element selectors
+  2. concerned with color and typography
+  3. basic element presenation
+*/
+html {
+  font-size: 1.125em; /* 18 / 16 */
+  line-height: 1.25em; /*20 / 16 */
+  font-family: "Courier New", Courier, monospace;
+  background-color: darkcyan;
+  padding: 0.5em;
+}
+
+body {
+
+  padding-top: 2.67em; /* 44/18=3.667 */
+  padding-right: 1.222em; /* 22/18=1.222 */
+  padding-left: 1.222em; //* 22/18=1.222 */
+}
+
+
+h1,
+h2,
+h3,
+h4,
+figure,
+figcaption {
+padding-bottom: 1.222em; /* 22/18=1.222 */
+}
+
+
+h1 {
+  text-align: center;
+  font-style: italic;
+  font-family: sans-serif;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 2.22em; /* 40/18=2.222 */
+  line-height: 1.1em; /* 44/40=1.1 */
+  margin-bottom: 22px;
+
+}
+
+h2 {
+  text-align: center;
+  padding-top:0.5em;
+  padding-bottom: 0;
+  font-size:1.5em;
+  line-height:1.125em;
+
+}
+
+h3 {
+  text-align: left;
+  font-style: bold;
+  font-weight:bold;
+  text-decoration: underline solid;
+  font-size: 1.25em;
+
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 5em;
+}
+
+p {
+  padding-bottom: 1.222em;
+  font-size: 14px
+  line-height: 22px;
+  margin-bottom: 22px;
+  text-indent: 25px;
+}
+
+li {
+  padding-bottom:0.5em;
+}
+
+ol, ul {
+  padding-bottom: 0.222em;
+}
+
+ul {
+  list-style-type: square;
+  list-style-position: outside;
+}
+
+ol {
+  list-style-type: circle;
+  list-style-position: outside;
+}
+
+li ol, li ul {
+  padding-left: 0em;
+  padding-top: 0em;
+  padding bottom: 0em;
+}
+li a {
+    float: left;
+    display: block;
+    color: #000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+
+/* Responsive Media */
+img {
+  display: block;
+  width: 100%;
+}
+
+figcaption {
+  padding-bottom: 1.125em;
+  text-align: center;
+}
+
+footer {
+  justify-content: center;
+  display: flex;
+}
+/* Layout Styles */
+/*
+  Hint: these tend to be
+  1. IDs; but also classes, sometimes
+  2. concerned with layout and spatial
+     relationships
+*/
+
+#navigation {
+  position: absolute;
+  width: 100%;
+  top:0;
+  left:0;
+  font-weight: bold;
+
+}
+
+#navigation li {
+  float: left;
+  width:auto;
+}
+
+#navigation a {
+  display:block;
+  width:100%;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  text-align: center;
+}
+
+#navigation a:hover:not(.active) {
+  background-color: #B22222;
+  color: darkcyan;
+  fond-size:120%;
+}
+
+/* Modular Styles */
+/*
+  Repeating style patterns.
+  Hint: these tend to be:
+  1. classes and relationship selectors
+  2. concerned with adjustments to base styles,
+      spacing, color, etc. etc.
+*/
+
+}
