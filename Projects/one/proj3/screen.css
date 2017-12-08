@@ -15,97 +15,68 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
   3. basic element presenation
 */
 html {
-  font-size: 1.125em; /* 18 / 16 */
-  line-height: 1.25em; /*20 / 16 */
+  font-size: 1.25em; /* 18 / 16 */
+  line-height: 1.15em; /*20 / 16 */
   font-family: "Courier New", Courier, monospace;
   background-color: darkcyan;
-  padding: 0.5em;
 }
 
 body {
-
-  padding-top: 2.67em; /* 44/18=3.667 */
+  padding-top: 2.444em; /* 44/18=3.667 */
   padding-right: 1.222em; /* 22/18=1.222 */
   padding-left: 1.222em; //* 22/18=1.222 */
+  background-color: #2980B9;
 }
 
-
-h1,
-h2,
+p,
 h3,
-h4,
-figure,
-figcaption {
-padding-bottom: 1.222em; /* 22/18=1.222 */
+ul {
+padding-top: 1.0em; /* 22/18=1.222 */
 }
 
+p {
+  padding-bottom: 0.6667em;
+}
 
 h1 {
-  text-align: center;
-  font-style: italic;
-  font-family: sans-serif;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  font-size: 2.22em; /* 40/18=2.222 */
-  line-height: 1.1em; /* 44/40=1.1 */
-  margin-bottom: 22px;
+  font-style:none;
+  padding-top: 1.6em;
 
 }
 
 h2 {
-  text-align: center;
-  padding-top:0.5em;
-  padding-bottom: 0;
+
+  padding-top:1em;
   font-size:1.5em;
-  line-height:1.125em;
+  line-height:1em;
+  font-style: italic;
 
 }
 
 h3 {
-  text-align: left;
   font-style: bold;
   font-weight:bold;
   text-decoration: underline solid;
-  font-size: 1.25em;
+  font-size: 1.0em;
+  line-height: 1em;
 
 }
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 5em;
-}
-
-p {
-  padding-bottom: 1.222em;
-  font-size: 14px
-  line-height: 22px;
-  margin-bottom: 22px;
-  text-indent: 25px;
+    list-style-type: circle;
 }
 
 li {
   padding-bottom:0.5em;
 }
 
-ol, ul {
+ol li {
+  padding-top: 0.222em;
+  padding-bottom:1em;
+  list-style-type: none;
+}
+ul li {
   padding-bottom: 0.222em;
-}
-
-ul {
-  list-style-type: square;
-  list-style-position: outside;
-}
-
-ol {
-  list-style-type: circle;
-  list-style-position: outside;
-}
-
-li ol, li ul {
-  padding-left: 0em;
-  padding-top: 0em;
-  padding bottom: 0em;
+  list-style-type:disc;
 }
 li a {
     float: left;
@@ -114,12 +85,17 @@ li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+}
 
+article {
+  padding-bottom: 1.125em;
+}
 
-/* Responsive Media */
-img {
-  display: block;
-  width: 100%;
+footer {
+  background-color:none;
+  position:absolute;
+  width: 75%
+  display:flex;
 }
 
 figcaption {
@@ -127,10 +103,6 @@ figcaption {
   text-align: center;
 }
 
-footer {
-  justify-content: center;
-  display: flex;
-}
 /* Layout Styles */
 /*
   Hint: these tend to be
@@ -139,34 +111,110 @@ footer {
      relationships
 */
 
-#navigation {
-  position: absolute;
+#navmenu {
+  position:fixed;
   width: 100%;
   top:0;
   left:0;
-  font-weight: bold;
+  right:0;
+  font-weight:bolder;
+  list-style-type: none;
+  background-color:#000000;
+  text-align:center;
 
 }
 
-#navigation li {
-  float: left;
-  width:auto;
+#navmenu li {
+  float: right;
+  width: 33.33333333%;
+  blackground-color: #A9CCE3;
 }
 
-#navigation a {
+#navmenu a {
   display:block;
   width:100%;
+  text-align: center;
+  text-decoration: none;
   padding-top: 0.5em;
+  padding-left:0em;
   padding-bottom: 0.5em;
+  color: #A9CCE3;
   text-align: center;
 }
 
-#navigation a:hover:not(.active) {
-  background-color: #B22222;
+#navmenu a:hover {
+
+  align-items:center;
   color: darkcyan;
-  fond-size:120%;
 }
 
+#header {
+  font-family:sans-serif;
+  list-style-type: none;
+}
+
+#footer {
+  width:auto;
+}
+
+#images{
+  text-align:center;
+}
+/* Responsive Media */
+img,
+audio {
+  display: block;
+  width: 100%;
+}
+
+/* State Styles */
+
+@@media screen and (min-width: 350px) {
+  body {
+    padding-right: 11.423%;
+    padding-left: 11.423%;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  html {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  body {
+    padding-right: 9.41177%; /*80/850 = 0.0941177*/
+    padding-left:9.41177%;
+  }
+
+  #maintext {
+    width:50%
+    float: left;
+  }
+  #images {
+    width:46%
+    margin-left:4%;
+    float: none;
+  }
+  #footer {
+    clear:both;
+  }
+  .flexbox #maintext,
+  .flexbox #images {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .flexbox #interests,
+  .flexbox #photosection,
+  .flexbox #resumecontent {
+    display:flex;
+    flex-flow: wrap;
+  }
+
+}
 /* Modular Styles */
 /*
   Repeating style patterns.
@@ -175,5 +223,3 @@ footer {
   2. concerned with adjustments to base styles,
       spacing, color, etc. etc.
 */
-
-}
